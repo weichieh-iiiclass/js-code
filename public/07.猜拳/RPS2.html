@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <title>猜拳</title>
+    <style>
+        
+        .wrap {
+            padding: 5px;
+            margin: 50px;
+            background-color: rgb(221, 159, 159);
+        }
+        .middle {
+            display: flex;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(221, 220, 159);
+            margin: 20px;
+        }
+        i {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 'scissors', 'rock', 'paper' -->
+     <!-- <i class="far fa-hand-scissors"></i>
+    <i class="far fa-hand-rock"></i>
+    <i class="far fa-hand-paper"></i> -->
+    <div class="wrap ">
+        <h3>請從下三選一：</h3>
+        剪刀<button id='scissors'><i class="far fa-hand-scissors"></i></button>
+        石頭<button id="rock"><i class="far fa-hand-rock"></i></button>
+        布<button id="paper"><i class="far fa-hand-paper"></i></button>
+
+    </div>
+    
+    <!-- <button id="startGame">剪刀！石頭！布！</button> -->
+    <div class="wrap middle">
+        <div class="box">
+            <h3>你:</h3>
+            <h2 id="user" class=""></h2>
+        </div>
+        <div class="box">
+            <h3>電腦:</h3>
+            <h2 id="computer" class=""></h2>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <h3 id="result">結果：</h3>
+    </div>
+
+    
+    <script src="./RPS2.js"></script>
+</body>
+</html>

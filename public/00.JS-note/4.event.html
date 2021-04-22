@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+    <style>
+      .wrap {
+        width: 800px;
+        height: 400px;
+        background-color: #ccc;
+        padding: 50px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #afa;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Event 補充文章 -->
+    <!-- https://github.com/aszx87410/blog/issues/21 -->
+    <div class="wrap">
+      <div class="box">box</div>
+    </div>
+
+    <script>
+      const wrap = document.querySelector(".wrap");
+      const box = document.querySelector(".box");
+
+      wrap.addEventListener("click", function () {
+        console.log("wrap");
+      });
+
+      box.addEventListener("click", function () {
+        console.log("box");
+      });
+    </script>
+  </body>
+</html>

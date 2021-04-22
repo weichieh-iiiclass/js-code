@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scope</title>
+  </head>
+  <body>
+    <script>
+      // 全域變數
+      var a = 10;
+
+      function first() {
+        // 區域變數
+        function second() {
+          // 我的作用域
+          a--;
+          console.log("second's a", a);
+        }
+        second();
+
+        var a = 15;
+        a--;
+        console.log("first's a", a);
+
+        
+        console.log("first's a", a);
+      }
+
+      first();
+      console.log("outside", a);
+    </script>
+  </body>
+</html>

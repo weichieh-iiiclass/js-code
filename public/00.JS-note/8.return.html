@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>return</title>
+  </head>
+  <body>
+    <script>
+      // 閉包 return 一個 Function, 裡面可以放自己的變數
+      function abc(a) {
+        let myA = a;
+        function bbb() {
+          myA++;
+          console.log("bbb", myA);
+        }
+
+        return bbb;
+      }
+
+      // 創建一個不被其他人污染的環境
+      const myResult = abc(2);
+      myResult();
+      myResult();
+      myResult();
+
+      // 創建一個不被其他人污染的環境
+      const myResult2 = abc(10);
+      myResult2();
+      myResult2();
+      myResult2();
+
+      myResult();
+    </script>
+  </body>
+</html>

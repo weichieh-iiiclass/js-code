@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+    <style>
+      .wrap {
+        width: 800px;
+        height: 400px;
+        background-color: #ccc;
+        padding: 50px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #afa;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Event 補充文章 -->
+    <!-- https://github.com/aszx87410/blog/issues/21 -->
+    <div class="wrap">
+      <div class="box">box</div>
+    </div>
+
+    <script>
+      const wrap = document.querySelector(".wrap");
+      const box = document.querySelector(".box");
+
+      wrap.addEventListener("click", function (event) {
+        // 誰觸發了這個 event?
+        console.log("wrap: event.target", event.target);
+
+        // 誰呼叫我這個 function?
+        console.log("wrap: event.currentTarget", event.currentTarget);
+
+        // this?
+        // 其實他就是一個代名詞
+        // 大部分預設的情況下，誰呼叫就是誰
+        console.log("wrap: this", this);
+      });
+
+      box.addEventListener("click", function () {
+        console.log("box: event.target", event.target);
+      });
+
+      //   console.log("outside this", this);
+      // this=window
+    </script>
+  </body>
+</html>

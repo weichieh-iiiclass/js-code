@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <style>
+        .up {
+            display: flex;
+            justify-content: center;
+        }
+        .wrap {
+            margin: 50px;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(221, 159, 159);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .down {
+            /* margin: 0 auto; */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="up">
+            <div class="wrap">
+                <h3>電腦:</h3>
+                <h2 id="computer" class="box"></h2>
+            </div>
+            <div class="wrap">
+                <h3>你:</h3>
+                <h2 id="user" class="box"></h2>
+            </div>
+        </div>
+        <div class="down">
+            <button id="startGame">擲骰子比大小</button>
+            <h3 id="result"></h3>
+        </div>
+    </div>
+
+
+    <script src="./dice.js"></script>
+</body>
+
+</html>
