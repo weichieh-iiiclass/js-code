@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print star</title>
+    <style>
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 題目是： -->
+    <!-- 給定一個最大值，印出星星數從 1 到最大值，再逐漸遞減回 1 -->
+
+    <!-- 例如， 給定 max = 3，會印出下面的結果： -->
+    <!-- ＊ -->
+    <!-- ＊＊ -->
+    <!-- ＊＊＊ -->
+    <!-- ＊＊ -->
+    <!-- ＊ -->
+
+    <input type="number">
+    <button>print</button>
+    <div id="result"></div>
+    <script>
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', function (e) {
+            const max = document.querySelector("input").value;
+            result.innerHTML = '';
+            startPrinting(max, 1);
+        })
+
+        function startPrinting(max, index) {
+            const nowNum = index;
+            print(nowNum);
+            if (index < max) {
+                index++;
+                startPrinting(max, index);
+                print(nowNum);
+            }
+        }
+
+        function print(starNum) {
+            let starString = ''
+            for (let i = 0; i < starNum; i++) {
+                starString += '*';
+            }
+            // 在網頁印出星號
+            const newString = document.createElement('p');
+            newString.innerHTML = starString;
+            result.appendChild(newString);
+        }
+
+    </script>
+</body>
+
+</html>
